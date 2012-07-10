@@ -21,17 +21,23 @@ body
 			div.container
 				a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
 					span.icon-bar
+
 					span.icon-bar
+
 					span.icon-bar
-				a.brand(href='#home') !{title}
+
+				a.brand(href=base_url) !{title}
 				div.nav-collapse
 					ul.nav
 						li.active
-							a(href='#home') Home
+							a(href='/') Home
 						li
 							a(href='#about') About
 						li
 							a(href='#contact') Contact
+						li
+							a(href='/rss.xml')
+								img(src=base_url + '/img/feed-icon-14x14.png')
 
 	div.container
 		- each article in articles
@@ -67,16 +73,17 @@ body
 			div.row
 				hr
 				div.span4
-					p
 					|	&copy; Michael S. Kelly 2011
 					p
 						a(href='http://github.com/guyht/glog') Powered by Glog
-				div.span2.offset6
-					img.centered(src=base_url + '/img/thumbnail_small.jpg', height='50')
+				div.span2.offset2
+					h4
+						em
+							a.centered(href='http://www.motherjones.com/files/emotional_dog_and_rational_tail.pdf', title='I intuit, therefore I am') Intueor ergo sum
+				
+				div.span2.offset2
+					img.right(src=base_url + '/img/thumbnail_small.jpg', height='50')
 			div.row
-				div.span2.offset10
-					h4 
-						a.centered(href='http://www.motherjones.com/files/emotional_dog_and_rational_tail.pdf', title='I intuit, therefore I am') Intueor ergo sum
 					
 			
 
@@ -96,15 +103,5 @@ body
 	// ==================================================
 	// Placed at the end of the document so the pages load faster
 	script(src=base_url + '/bootstrap/js/jquery.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-transition.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-alert.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-modal.js')
-	script(src=base_url + '/bootstrap/js/bootstrap-dropdown.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-scrollspy.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-tab.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-tooltip.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-popover.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-button.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-collapse.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-carousel.js')
-	//script(src=base_url + '/bootstrap/js/bootstrap-typeahead.js')
+	script(src=base_url + '/bootstrap/js/bootstrap.js')
+	

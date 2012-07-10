@@ -1,8 +1,14 @@
-img.centered {
+.centered {
     display: block;
     margin-left: auto;
     margin-right: auto }
 
-.centered {
-    margin-left: auto;
-    margin-right: auto }
+.left {
+	display: block;
+	margin-left: 0;
+	margin-right: auto; }
+
+.right {
+	display: block;
+	margin-left: auto;
+	margin-right: 0; }
